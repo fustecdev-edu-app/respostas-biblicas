@@ -1,40 +1,175 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iremos Morar no céu?</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tabela Responsiva (Móvel)</title>
     <style>
+        :root {
+            --bg: #f7fafc;
+            --card: #ffffff;
+            --muted: #6b7280;
+            --accent: #0f172a;
+            --accent-2: #0ea5a4;
+            --gap: 12px;
+            --radius: 12px;
+        }
+
+        html,
         body {
+            height: 100%;
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
             background-color: darkslategray;
         }
 
+        .wrap {
+            max-width: 900px;
+            margin: 24px auto;
+            padding: 16px;
+        }
+
+        /* TÍTULO */
         h1 {
+            font-size: 18px;
+            margin: 0 0 12px 0;
+            color: var(--accent);
+        }
+
+        /* TABELA (desktop) */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 1px 0 rgba(15, 23, 42, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            background: var(--card);
+        }
+
+        .table thead th {
+            text-align: left;
+            padding: 14px 16px;
+            font-weight: 700;
+            font-size: 13px;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.03), transparent);
+            color: var(--accent);
+            border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+        }
+
+        .table tbody td {
+            padding: 12px 16px;
+            font-size: 14px;
+            color: var(--accent);
+            border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+            vertical-align: top;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background: transparent;
+        }
+
+        .ref {
+            white-space: nowrap;
+        }
+
+        /* zebragem leve para legibilidade */
+        .table tbody tr:hover td {
+            background: rgba(14, 165, 164, 0.03);
+        }
+        h1{
             color: gold;
         }
-
-        a {
-            color: beige;
-            font-size: 22px;
+        h2{
+            color: #f7fafc;
         }
-
-        a:hover {
+        small{
+            color: gold;
+            font-size: 20px;
+        }
+        a{
+            color: #f7fafc;
+            font-size: 18px;
+        }
+        a:hover{
             color: gold;
         }
+       
 
-        h2 {
-            color: aliceblue;
+        /* --- ESTILO MÓVEL: transformar cada linha em card --- */
+        @media (max-width:720px) {
+            .table thead {
+                display: none;
+            }
+
+            /* esconde cabeçalho */
+            .table,
+            .table tbody,
+            .table tr,
+            .table td {
+                display: block;
+                width: 100%;
+            }
+
+            .table tr {
+                margin-bottom: var(--gap);
+                background: var(--card);
+                border-radius: var(--radius);
+                box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+                padding: 12px;
+            }
+
+            .table td {
+                padding: 8px 10px;
+                border-bottom: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+
+            /* rótulo antes do valor */
+            .table td:before {
+                content: attr(data-label);
+                font-weight: 700;
+                display: inline-block;
+                min-width: 42%;
+                color: var(--muted);
+                font-size: 12px;
+            }
+
+            .table td .value {
+                display: inline-block;
+                text-align: right;
+                min-width: 48%;
+                word-break: break-word;
+                color: var(--accent);
+                font-size: 14px;
+            }
         }
 
-        td {
-            color: aliceblue;
+        /* Ajustes para leitura (pequenas telas muito estreitas) */
+        @media (max-width:360px) {
+            .table td:before {
+                min-width: 40%;
+            }
 
+            .table td .value {
+                min-width: 55%;
+            }
+        }
+
+        /* pequenas utilidades */
+        .muted {
+            color: var(--muted);
+            font-size: 13px;
         }
     </style>
 </head>
 
 <body>
+
     <h1 align="center"> 1️⃣ O PLANO ORIGINAL DE DEUS — A TERRA, NÃO O CÉU</h1>
     <h2 align="center">📖 Gênesis 1:26–28 <br>
 
@@ -125,91 +260,101 @@
     <h1 align="center">7️⃣ O MESSIAS FOI AO CÉU — MAS VOLTARÁ</h1>
     <h2 align="center">📖 João 14:2–3 <br>
 
-“Na casa de meu Pai há muitas moradas;
-se não fosse assim, eu vo-lo teria dito;
-vou preparar-vos lugar.
-E quando eu for e vos preparar lugar,
-virei outra vez e vos levarei para mim mesmo,
-para que onde eu estiver estejais vós também.” <br>
+        “Na casa de meu Pai há muitas moradas;
+        se não fosse assim, eu vo-lo teria dito;
+        vou preparar-vos lugar.
+        E quando eu for e vos preparar lugar,
+        virei outra vez e vos levarei para mim mesmo,
+        para que onde eu estiver estejais vós também.” <br>
 
-🕯️ Lição: <br>
-Ele foi preparar o Reino — mas prometeu voltar. <br>
-Não diz que nós iremos viver lá permanentemente; <br>
-Ele vem para reinar conosco.</h2>
+        🕯️ Lição: <br>
+        Ele foi preparar o Reino — mas prometeu voltar. <br>
+        Não diz que nós iremos viver lá permanentemente; <br>
+        Ele vem para reinar conosco.</h2>
     <br>
     <br>
     <h1 align="center">8️⃣ A ESPERANÇA DOS DISCÍPULOS — O REINO NA TERRA</h1>
     <h2 align="center">📖 Atos 1:6–11 <br>
 
-“Senhor, restaurarás tu neste tempo o reino a Israel?
-...E, dito isto, foi elevado às alturas...
-E os anjos disseram: <br>
-Esse Jesus que dentre vós foi recebido em cima no céu,
-há de vir assim como para o céu o vistes ir.” <br>
+        “Senhor, restaurarás tu neste tempo o reino a Israel?
+        ...E, dito isto, foi elevado às alturas...
+        E os anjos disseram: <br>
+        Esse Jesus que dentre vós foi recebido em cima no céu,
+        há de vir assim como para o céu o vistes ir.” <br>
 
-🕯️ Lição: <br>
-Os discípulos esperavam o Reino na Terra, <br>
-e os anjos confirmaram que Ele voltará do céu à Terra.</h2>
+        🕯️ Lição: <br>
+        Os discípulos esperavam o Reino na Terra, <br>
+        e os anjos confirmaram que Ele voltará do céu à Terra.</h2>
     <br>
     <br>
 
     <h1 align="center">9️⃣ A REVELAÇÃO FINAL — DEUS DESCE PARA HABITAR COM OS HOMENS</h1>
     <h2 align="center">📖 Apocalipse 21:1–3 <br>
 
-“E vi um novo céu e uma nova terra;
-porque já o primeiro céu e a primeira terra passaram...
-<br>
-
-E ouvi uma grande voz do céu, que dizia:
-Eis aqui o tabernáculo de Deus com os homens,
-pois com eles habitará, e eles serão o seu povo,
-e o mesmo Deus estará com eles, e será o seu Deus.”
-<br>
-
-🕯️ Lição: <br>
-Não diz que os homens sobem ao céu, <br>
-mas que Deus desce para habitar com os homens na nova Terra.</h2>
-    <br>
-    <br>
-    <h1 align="center">CONCLUSÃO — SÓ COM A BÍBLIA</h1>
-    <h1 align="center">| Verdade
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        | Referência
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-        <br>| ------------------------------------------------------------------- | ----------------------------- | <br>
-        | O homem foi criado para viver na Terra
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        | Gênesis 1:26–28 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br>
-        | O céu é a morada de Deus, a terra é para os homens | Salmo 115:16
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<br>
-        | Os justos herdarão a terra
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        | Salmo 37 / Mateus 5:5 &nbsp;|<br>
-        | O reino será debaixo de todo o céu
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        | Daniel 7:27
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        |<br>
-        | O Messias voltará à Terra
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        | Atos 1:11 &nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        |<br>
-        | Deus habitará com os homens
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        | Apocalipse 21:3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+        “E vi um novo céu e uma nova terra;
+        porque já o primeiro céu e a primeira terra passaram...
         <br>
-        |----------------------------------------------------------------------------------------------------|
-    </h1>
+
+        E ouvi uma grande voz do céu, que dizia:
+        Eis aqui o tabernáculo de Deus com os homens,
+        pois com eles habitará, e eles serão o seu povo,
+        e o mesmo Deus estará com eles, e será o seu Deus.”
+        <br>
+
+        🕯️ Lição: <br>
+        Não diz que os homens sobem ao céu, <br>
+        mas que Deus desce para habitar com os homens na nova Terra.
+    </h2>
     <br>
-    <h1 align="center">📜 Conclusão final: <br>
+    <br>
+    <div class="wrap">
+        <h1>Promessas do Reino — Resumo Bíblico</h1>
 
-        Nenhum profeta, apóstolo ou o próprio Messias disse que os justos “morarão no céu”. <br>
-        A promessa é de novos céus e nova terra, onde Deus habitará com os homens para sempre.</h1>
+        <table class="table" role="table" aria-label="Promessas do Reino">
+            <thead>
+                <tr>
+                    <th>Verdade</th>
+                    <th>Referência</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Verdade"><span class="value">O homem foi criado para viver na Terra</span></td>
+                    <td data-label="Referência"><span class="value">Gênesis 1:26–28</span></td>
+                </tr>
+                <tr>
+                    <td data-label="Verdade"><span class="value">O céu é a morada de Deus, a terra é para os
+                            homens</span></td>
+                    <td data-label="Referência"><span class="value">Salmo 115:16</span></td>
+                </tr>
+                <tr>
+                    <td data-label="Verdade"><span class="value">Os justos herdarão a terra</span></td>
+                    <td data-label="Referência"><span class="value">Salmo 37 / Mateus 5:5</span></td>
+                </tr>
+                <tr>
+                    <td data-label="Verdade"><span class="value">O reino será debaixo de todo o céu</span></td>
+                    <td data-label="Referência"><span class="value">Daniel 7:27</span></td>
+                </tr>
+                <tr>
+                    <td data-label="Verdade"><span class="value">O Messias voltará à Terra</span></td>
+                    <td data-label="Referência"><span class="value">Atos 1:11</span></td>
+                </tr>
+                <tr>
+                    <td data-label="Verdade"><span class="value">Deus habitará com os homens</span></td>
+                    <td data-label="Referência"><span class="value">Apocalipse 21:3</span></td>
+                </tr>
+            </tbody>
+        </table>
+          <br><br>
+          <a href="index.html">Voltar</a>
+          <br><br>
+        <footer>
+           <small>&copy; 2025 Edu.App. Todos os direitos reservados.</small>
+       </footer>
+       <br><br>
+    </div>
 
-    <br><br><br>
-    <h1 align="center"><a href="index.html">Voltar</a></h1>
+   <br><br>
 
 </body>
 
