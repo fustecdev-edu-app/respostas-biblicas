@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profecias Compiladas</title>
+    <style>
+        body{
+            background-color: darkslategray;
+        }
+        .h1{
+            color: gold;
+        }
+        .h2{
+            color: aliceblue;
+        }
+        .btn{
+            background-color: aliceblue;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            margin-left: 45%;
+        }
+        .btn:hover{
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="h1" align="center"></h1>
+    <h2 class="h2" align="center"></h2>
+    <button class="btn">Iniciar</button>
+    
+
+    <script>
+        const btn = document.querySelector(".btn")
+        const h1 = document.querySelector(".h1")
+        const h2 = document.querySelector(".h2")
+
+        var textH1 = [
+            "A Linha Profética Completa",
+            "A visão profética revela quatro impérios sucessivos:",
+            "Cabeça de ouro – Babilônia",
+            "Ventre e coxas de bronze – Grécia",
+            "Pés de ferro misturado com barro – Última fase: Roma + humanidade (mistura)",
+            "2. O sistema romano entrou em TODAS as nações",
+            "Política (república, presidente, estado)",
+            "Religião (domingo, calendário gregoriano)",
+            "O mundo moderno inteiro é uma extensão de Roma ressuscitada.",
+            "3. O retorno de Israel e sua função profética",
+            "1967 → Libertação de Jerusalém",
+            "2017 → Jubileu de Jerusalém + Sinal astronômico de Ap 12",
+            "4. Apocalipse 12 – A mulher é Israel",
+            "Possui coroa de 12 estrelas",
+            "Preservada pelo Eterno",
+            "5. Apocalipse 13 – A besta persegue a mulher",
+            "A besta do mar recebe poder do dragão",
+            "A segunda besta persegue os remanescentes: os que guardam os",
+            "6. A ONU e a imagem da besta",
+            "7. Israel moderno como república dentro do sistema romano",
+            "8. O barro e o ferro nos pés da estátua",
+            "Fragilidade política",
+            "Repúblicas humanas dentro de uma estrutura romana",
+            "9. O sistema da besta já opera antes da marca final",
+            "Economia global",
+            "Controle estatal",
+            "10. A Pedra que destrói a estátua",
+            "O Reino do Eterno",
+            "A destruição total dos reinos humanos",
+            "Por que a Pedra acerta os pés e não outra parte?",
+            "1. Os pés são a última fase da estátua Representam o estágio final da história humana: ferro (Roma) + barro (homem). A pedra acerta onde a estátua ainda está de pé, no seu ponto mais fraco.",
+            "3. É na fase dos pés que o sistema humano perde coesão O ferro (força de Roma) mistura-se com o barro (fragilidade humana). Reinos e nações ficam divididos, fragmentados e instáveis.",
+            "5. A intervenção divina acontece quando o governo humano chega ao limite O mundo atual vive exatamente na fase de mistura, tecnologia e fragilidade moral. Este é o momento que Daniel descreve para a chegada do Reino.",
+            "7. Os pés simbolizam o MUNDO moderno Democracias, repúblicas, direitos humanos, economia global — tudo baseado no sistema romano (ferro) misturado com o homem (barro).",
+            "11. Conclusão Profética. Conclusão Profética",
+            "A estátua já está completa",
+            "A mulher é Israel",
+            "A perseguição aos remanescentes já começou",
+            "Estamos exatamente onde Daniel, João e os profetas anunciaram.",
+      
+
+
+        ]
+
+            var textH2 = [
+            "1. A estátua do sonho de Nabucodonosor (Daniel 2)",
+            "",//
+            "Peito e braços de prata – Medo-Pérsia",
+            "Pernas de ferro – Roma",
+            "Esta última fase representa o mundo atual: repúblicas, democracias, sistemas romanos misturados com a fragilidade humana.",
+            "Direito (códigos, juiz, senado)",
+            "Economia (tributos, moeda, bancos)",
+            "Educação e estruturas civis",
+            "",//
+            "1917 → Declaração Balfour",
+            "Ciclos de 50 anos se repetem marcando movimentos proféticos.",
+            "Dá à luz o Messias",
+            "Foge ao deserto (dispersão por quase 2 mil anos)",
+            "Após 1948 ela retorna à terra e volta ao cenário profético.",
+            "",//
+            "A besta persegue Israel (a mulher) quando ela volta a existir",
+            "",//
+            "mandamentos e testemunho de Yeshua",
+            "Uma imagem híbrida foi colocada na ONU com características de Daniel 7 e Ap 13: leão, urso, leopardo. Ela representa o sistema global unificado dos impérios antigos — a própria besta moderna.",
+            "Israel voltou como república, não como reino. Assim, está assentada sobre o sistema romano-global. É a mulher de Ap 17 montada na besta — Israel politicamente ligada ao sistema mundial.",
+            "O ferro (Roma) misturado com o barro (o homem, criado do barro) revela:",
+            "Força militar e legal romana",
+            "Hoje vivemos EXACTAMENTE no tempo dos pés da estátua.",
+            "A marca não é só um objeto, mas um SISTEMA:",
+            "Identificação universal",
+            "Regras de compra e venda, O que existe hoje são “sinais” do nome da besta espalhados nos sistemas.",
+            "A pedra cortada sem auxílio de mãos (Dn 2:34-35) representa:",
+            "A vinda do Messias para estabelecer Seu governo",
+            "Ela atinge os pés da estátua — o tempo em que vivemos — derrubando todo o sistema romano/humano global. Após isso, a pedra cresce e se torna um grande monte que enche toda a terra: o Reino eterno do Eterno.",
+            "",//
+            "2. Não há mais impérios após os pés A profecia mostra que, depois da fase dos pés, não existe outro reino humano sequencial. Estamos no limite final do sistema humano.",
+            "4. A queda de toda a estátua depende da destruição da base A base é o fundamento. Ao acertar os pés, a pedra derruba TODA a estrutura acumulada dos impérios — Babilônia, Pérsia, Grécia e Roma.",
+            "6. A pedra não toca ouro, prata, bronze ou ferro — mostra que esses reinos já passaram Eles não precisam ser destruídos novamente. A intervenção acontece no reino existente no momento da vinda do Messias.",
+            "A Pedra acerta exatamente a fase da história onde estamos vivendo agora.",
+            "Tudo aponta que:",
+            "Vivemos nos pés: Roma + humanidade",
+            "A besta é o sistema global romano renascido",
+            "A ONU manifesta simbolicamente a própria besta",
+
+
+
+        ]
+
+        var cont = 0
+        
+        btn.addEventListener("click", () =>{
+            btn.textContent="Proxímo >>"
+            h1.textContent=textH1[cont]
+            h2.textContent=textH2[cont]
+            if(cont == textH1.length){
+               btn.textContent="Inicio"
+               h1.textContent="Fim"
+               h2.textContent=""
+               cont=0
+            }
+            cont++
+            
+
+        })
+
+    </script>
+</body>
+</html>
